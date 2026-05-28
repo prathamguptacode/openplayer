@@ -138,27 +138,27 @@ app.get('/image/:id', (req: Request, res: Response) => {
     const imageId = req.params.id;
     let imgPath = '';
     if (imageId == 'mummaonbalcony') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/mummaonbalcony.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/mummaonbalcony.webp';
     } else if (imageId == 'airplane') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/airplane.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/airplane.webp';
     } else if (imageId == 'outdoor') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/outdoor.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/outdoor.webp';
     } else if (imageId == 'reverse_shell') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/reverse_shell.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/reverse_shell.webp';
     } else if (imageId == 'netflix') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/stream.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/stream.webp';
     } else if (imageId == 'cycle') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/cycle.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/cycle.webp';
     } else if (imageId == 'robowar') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/robowar.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/robowar.webp';
     } else if (imageId == 'diwali') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/diwali.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/diwali.webp';
     } else if (imageId == 'firework') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/firework.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/firework.webp';
     } else if (imageId == 'road_trip') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/road_trip.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/road_trip.webp';
     } else if (imageId == 'bubble') {
-        imgPath = '/Users/pratham/Documents/coding-1/openplayer/openplayer/server/uploads/bubble_soap.webp';
+        imgPath = '/home/pratham/app/openplayer/server/uploads/bubble_soap.webp';
     } else {
         return res.status(404).json({ message: 'image not found' });
     }
