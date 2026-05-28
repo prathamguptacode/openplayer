@@ -1,8 +1,8 @@
 import fs from 'fs';
 import express, { type Request, type Response } from 'express';
-import cors from 'cors'
+import cors from 'cors';
 const app = express();
-app.use(cors())
+app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
     res.json({ message: 'hello world welcome to open player' });
@@ -90,27 +90,27 @@ app.get('/video/:id', (req: Request, res: Response) => {
     }
     let videoPath;
     if (vid == 'mummaonbalcony') {
-        videoPath = './uploads/mummaonbalcony.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/mummaonbalcony.mp4';
     } else if (vid == 'airplane') {
-        videoPath = './uploads/airplane.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/airplane.mp4';
     } else if (vid == 'outdoor') {
-        videoPath = './uploads/outdoor.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/outdoor.mp4';
     } else if (vid == 'reverse_shell') {
-        videoPath = './uploads/reverse_shell.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/reverse_shell.mp4';
     } else if (vid == 'netflix') {
-        videoPath = './uploads/stream.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/stream.mp4';
     } else if (vid == 'cycle') {
-        videoPath = './uploads/cycle.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/cycle.mp4';
     } else if (vid == 'robowar') {
-        videoPath = './uploads/robowar.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/robowar.mp4';
     } else if (vid == 'diwali') {
-        videoPath = './uploads/diwali.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/diwali.mp4';
     } else if (vid == 'firework') {
-        videoPath = './uploads/firework.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/firework.mp4';
     } else if (vid == 'road_trip') {
-        videoPath = './uploads/road_trip.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/road_trip.mp4';
     } else if (vid == 'bubble') {
-        videoPath = './uploads/bubble_soap.mp4';
+        videoPath = '/home/pratham/app/openplayer/server/uploads/bubble_soap.mp4';
     } else {
         return res.status(404).json({ message: 'video not found' });
     }
