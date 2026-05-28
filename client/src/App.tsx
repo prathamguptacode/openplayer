@@ -20,7 +20,7 @@ function App() {
   });
   const { data, isLoading } = useQuery({
     queryKey: ['data', 'video'],
-    queryFn: () => axios.get<serverData>('http://223.178.107.50/api/list')
+    queryFn: () => axios.get<serverData>('http://223.178.107.50:8000/api/list')
   })
 
   if (isLoading) {
@@ -56,7 +56,7 @@ function App() {
         <div className='flex justify-between gap-8 '>
           <div className="flex-4">
             <div>
-              <MyPlayer src={`http://223.178.107.50/api/video/${current.id}`} />
+              <MyPlayer src={`http://223.178.107.50:8000/api/video/${current.id}`} />
             </div>
             <div className="py-5 flex flex-col gap-4">
               <div className="font-medium text-xl">
