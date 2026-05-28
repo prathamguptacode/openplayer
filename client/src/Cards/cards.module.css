@@ -1,0 +1,152 @@
+.cards {
+    display: grid;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.thumbnailWrapper {
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 8px;
+
+    width: 170px;
+    aspect-ratio: 16/9;
+
+    position: relative;
+
+    >img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsla(0, 3%, 86%, 0.5);
+    backdrop-filter: blur(5px);
+
+    font-weight: 500;
+    font-size: 14px;
+
+    padding: .25em .5em;
+    border-radius: 5px;
+
+    position: absolute;
+    right: 4%;
+    bottom: 4%;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: .5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.title {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.channelNameWrapper {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: 12px;
+
+    color: hsl(0, 0%, 33%);
+}
+
+.verifiedIcon {
+    --dimension: 16px;
+    border-radius: 50%;
+    width: var(--dimension);
+    height: var(--dimension);
+    padding: .15em;
+
+    background-color: hsl(0, 0%, 40%);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraInfo {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    font-size: 12px;
+    color: hsl(0, 0%, 33%);
+}
+
+.optionsButton {
+    flex-shrink: 0;
+    align-self: start;
+
+    border-radius: 50%;
+    translate: 0 -.5em;
+    padding: .5em;
+
+    font-size: 14px;
+
+    &:hover {
+        background-color: #cecccc;
+    }
+}
+
+@media (max-width:960px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .thumbnailWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width:760px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:480px) {
+    .cards {
+        grid-template-columns: 1fr;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:360px) {
+    .cards {
+        font-size: 13px;
+    }
+}
