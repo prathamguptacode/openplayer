@@ -18,7 +18,7 @@ const Card = ({ id, duration, title, views, setCurrent }: {
         title: string;
     }>>
 }) => {
-    const imgUrl = `http://localhost:3001/image/${id}`
+    const imgUrl = `http://223.178.107.50/api/image/${id}`
     return (
         <div className={styles.card} onClick={() => setCurrent({ id, title })}>
             <div className={styles.thumbnailWrapper}>

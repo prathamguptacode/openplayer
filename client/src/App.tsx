@@ -20,7 +20,7 @@ function App() {
   });
   const { data, isLoading } = useQuery({
     queryKey: ['data', 'video'],
-    queryFn: () => axios.get<serverData>('http://localhost:3001/list')
+    queryFn: () => axios.get<serverData>('http://223.178.107.50/api/list')
   })
 
   if (isLoading) {
@@ -38,7 +38,7 @@ function App() {
           <div className="flex flex-1 gap-2">
             {[...new Array(2)].map((i, idx) => (
               <div
-                key={"second-array-demo-1" + idx+i}
+                key={"second-array-demo-1" + idx + i}
                 className="h-full w-full animate-pulse rounded-lg bg-gray-100 dark:bg-neutral-800"
               ></div>
             ))}
@@ -56,7 +56,7 @@ function App() {
         <div className='flex justify-between gap-8 '>
           <div className="flex-4">
             <div>
-              <MyPlayer src={`http://localhost:3001/video/${current.id}`} />
+              <MyPlayer src={`http://223.178.107.50/api/video/${current.id}`} />
             </div>
             <div className="py-5 flex flex-col gap-4">
               <div className="font-medium text-xl">
